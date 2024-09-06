@@ -1,0 +1,327 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+}
+
+.container {
+  width: 75%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+  background-color: #000000;
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.heading {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+.links {
+  margin-bottom: 20px;
+}
+
+.links a {
+  display: block;
+  color: #0066cc;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.drive-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.drive-button, .theme-toggle-button, .episode-button, .pagination button {
+  width: 140px;
+  height: 40px;
+  padding: 10px;
+  margin: 5px;
+  background-color: #000;
+  color: white;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.drive-button:hover, .theme-toggle-button:hover, .episode-button:hover, .pagination button:hover {
+  background-color: #333;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.drive-button.active {
+  background-color: #555;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+
+.drive-button:focus, .theme-toggle-button:focus, .episode-button:focus, .pagination button:focus {
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
+body.light-theme {
+  background-color: #fff;
+  color: #000;
+}
+
+body.light-theme .container {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+body.light-theme .drive-button, body.light-theme .theme-toggle-button, body.light-theme .episode-button, body.light-theme .pagination button {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+body.light-theme .drive-button:hover, body.light-theme .theme-toggle-button:hover, body.light-theme .episode-button:hover, body.light-theme .pagination button:hover {
+  background-color: #ddd;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+body.light-theme .heading {
+  color: #000;
+}
+
+.theme-toggle-button {
+  width: 80px;
+  height: 35px;
+  padding: 7px;
+  margin: 20px;
+  background-color: #000;
+  color: white;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  margin-bottom: 40px;
+}
+
+.episode-button {
+  width: 250px;
+  height: 40px;
+  padding: 10px;
+  margin: 1px;
+  background-color: #000;
+  color: white;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  text-align: center;
+  line-height: 8px;
+  font-size: 15px;
+}
+
+#episodeSearch, #collectionSearch {
+  width: 40px;
+  margin: 30px auto;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-theme #episodeSearch, body.light-theme #collectionSearch {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 10px;
+}
+
+body:not(.light-theme) .copyright {
+  color: #fff;
+}
+
+body.light-theme .copyright {
+  color: #000;
+}
+
+.page_info, .pagination {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.pagination button {
+  width: 40px;
+  height: 20px;
+  padding: 10px;
+  margin: 25px;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  text-align: center;
+  line-height: 0.5px;
+  font-size: 14px;
+}
+
+.pagination .page-button {
+  background-color: transparent;
+  color: inherit;
+  border: 1px solid inherit;
+}
+
+.pagination .page-button:hover {
+  background-color: #333;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.pagination .prev-next-button {
+  width: 140px;
+  height: 40px;
+  font-size: 14px;
+}
+
+body:not(.light-theme) .pagination .page-button {
+  background-color: #000;
+  color: #fff;
+  border-color: #fff;
+}
+
+body:not(.light-theme) .pagination .page-button:hover {
+  background-color: #333;
+}
+
+body:not(.light-theme) .pagination .prev-next-button {
+  background-color: #000;
+  color: #fff;
+  border-color: #fff;
+}
+
+body.light-theme .pagination .page-button {
+  background-color: transparent;
+  color: #000;
+  border-color: #000;
+}
+
+body.light-theme .pagination .page-button:hover {
+  background-color: #ddd;
+}
+
+body.light-theme .pagination .prev-next-button {
+  background-color: #e0e0e0;
+  color: #000;
+  border-color: #ccc;
+}
+
+/* Default (Dark Theme) */
+.highlighted {
+  background-color: lightcoral;
+  color: white;
+}
+
+.highlighted:hover {
+  background-color: rgb(195, 47, 47);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Light Theme */
+body.light-theme .highlighted {
+  background-color: lightcoral; /* Or any other light color you prefer */
+  color: black; /* Ensure the text color contrasts with the background */
+}
+
+body.light-theme .highlighted:hover {
+  background-color: rgb(195, 47, 47); /* You might want to adjust this for light theme */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.arc-button {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.arc-button:hover {
+  background-color: #555;
+}
+
+.arc-button.active-arc {
+  background-color: #ffcc00; /* Change to the desired highlight color */
+  color: #fff;
+}
+
+.active-arc {
+  background-color: #ffcccb; /* Light red background */
+  color: white;
+}
+
+/* Styles for multi-select-highlighted class */
+.arc-button.highlighted {
+  background-color: #007bff; /* Blue for highlighted state */
+  color: #fff;
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.arc-button.highlighted:hover {
+  background-color: #0056b3;
+  border-color: #004080;
+}
+
+.arc-button.highlighted:active {
+  background-color: #004080;
+  border-color: #003366;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All In One Place</title>
+  <link rel="icon" href="https://github.com/Allin1Place/onepiece/blob/main/assets/favicon.png?raw=true" type="image/x-icon">
+  <link rel="apple-touch-icon" href="https://github.com/Allin1Place/onepiece/blob/main/assets/favicon.png?raw=true" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+  <div class="container">
+    <div class="logo">
+      <img src="https://github.com/Allin1Place/onepiece/blob/main/assets/Logo.png?raw=true" alt="One Piece Logo" style="max-width: 90%; height: auto;">
+    </div>
+    <div class="drive-buttons">
+      <button class="theme-toggle-button" onclick="toggleTheme()">Light Mode</button>
+    </div>
+    <div class="section">
+      <div class="heading">Watch Online</div>
+      <div class="drive-buttons">
+        <button class="drive-button" id="w1" onclick="openSiteURL('https://hianime.to/watch/one-piece-100?ep=2142')">HiAnime.to</button>
+      </div>
+    </div>
+    <div class="section">
+      <div class="heading">Episode Guide</div>
+      <div class="drive-buttons">
+        <button class="drive-button" id="g1" onclick="openSiteURL('https://en.wikipedia.org/wiki/Lists_of_One_Piece_episodes')">Wikipedia</button>
+        <button class="drive-button" id="g2" onclick="openSiteURL('https://onepiece.fandom.com/wiki/Episode_Guide')">Onepiece Fandom</button>
+      </div>
+    </div>
+    <div id="download-episodes" class="section">
+      <div class="heading">Download Episodes</div>
+      <div class="drive-buttons">
+        <button class="episode-button" onclick="showSection('individual-episodes')">Click for Individual Episodes</button>
+      </div>
+      <input type="text" id="collectionSearch" placeholder="Search" oninput="filterCollections()">
+      <div id="collection-buttons-container"></div>
+    </div>
+    <div id="individual-episodes" class="section hidden">
+      <div class="heading">Download Episodes</div>
+      <div class="drive-buttons">
+        <button class="episode-button" onclick="showSection('download-episodes')">Click for Collection of Episodes</button>
+      </div>
+      <input type="text" id="episodeSearch" placeholder="Search" oninput="filterEpisodes()">
+      <div id="arc-buttons-container" class="section hidden">
+        <div class="container">
+          <div class="heading">Select Arc</div>
+          <!-- <button class="multi-select-toggle" onclick="toggleMultiSelect()">Enable Multi-Select</button> -->
+          <div id="arc-buttons"></div>
+        </div>
+      </div>
+      <button class="drive-button" onclick="resetFilter()">Reset selection</button>
+      <div class="pagination">
+        <button id="prev-button" onclick="changePage(-1)">&lt;</button>
+        <span id="page-info" class="page_info"></span>
+        <button id="next-button" onclick="changePage(1)"> &gt;</button>
+      </div>
+      <div id="episode-buttons-container"></div>
+    </div>
+    <div class="copyright">
+      &copy; 2024 allin1place.github.io. All rights reserved.
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
